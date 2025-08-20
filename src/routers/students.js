@@ -17,7 +17,7 @@ import { authenticate } from '../middlewares/authenticate.js';
 
 const studentsRouter = Router();
 
-studentsRouter.use(authenticate);
+studentsRouter.use('/students', authenticate);
 
 studentsRouter.get('/', getStudentsController);
 
